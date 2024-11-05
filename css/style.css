@@ -132,6 +132,10 @@ section {
 /* Image Border Styles (Same as the Section Border Styles) */
 #home-page img {
   border: 2px solid red;
+  max-width: 150px; /* Limit size of images on home page */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+  display: block; /* Make it a block element */
 }
 
 #favorite-music img {
@@ -149,7 +153,6 @@ section {
   max-width: 150px; /* Set a max width for mobile */
   height: auto; /* Maintain aspect ratio */
   margin: 0 auto; /* Center the image */
-  display: block; /* Make it a block element */
 }
 
 /* Footer Styling */
