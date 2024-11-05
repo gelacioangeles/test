@@ -159,64 +159,67 @@ main::after {
   clear: both;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-  
-  section {
-    float: none;
-    width: 100%;
-    margin-bottom: 1em;
-  }
-}
-
 /* Mobile Styles for Devices with a min-width of 600px */
 @media screen and (min-width: 600px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
+  /* Navigation: Change flex direction to column for smaller screens */
+  #home-page nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+  }
+  
+  /* Header: Increase font size for better readability */
+  #home-page header h1 {
+    font-size: 2.5em; /* Larger font size for header */
   }
 
-  nav ul li {
-    margin: 0 1em;
+  /* Section width: Set to 100% to stack sections */
+  #home-page section {
+    width: 100%; /* Full width for sections */
+    margin-bottom: 1em; /* Space between sections */
   }
 
-  header h1 {
-    font-size: 2em;
+  /* Main content: Adjust the main content layout */
+  #home-page main {
+    padding: 1em; /* Add padding for better spacing */
   }
 
-  section {
-    width: 45%;
+  /* Footer: Adjust font size for readability */
+  #home-page footer {
+    font-size: 1.2em; /* Increase footer font size */
+    padding: 1rem; /* Add padding to footer */
   }
 
+  /* Keep the original image style */
   #home-page img {
-    margin: 8em auto 1em;
+    margin: 8em auto 1em; /* Maintain original margin style */
   }
 }
 
 /* Mobile Styles for Devices with a min-width of 1000px */
 @media screen and (min-width: 1000px) {
-  nav ul li {
-    display: inline-block;
+  /* Navigation: Change layout to horizontal */
+  #home-page nav ul {
+    flex-direction: row; /* Horizontal navigation */
   }
 
-  section {
-    padding: 2em;
+  /* Section width: Allow two sections side by side */
+  #home-page section {
+    width: 48%; /* Two sections side by side */
   }
 
+  /* Header: Adjust margin for spacing */
+  #home-page header h1, #home-page header h2 {
+    margin-bottom: 0.5em; /* Space below headers */
+  }
+
+  /* Main content width: Adjust main content layout */
   #home-page main {
-    width: 80%;
+    width: 80%; /* Set width for main content */
   }
 
-  h1, h2 {
-    margin-bottom: 0.5em;
-  }
-
-  footer {
-    font-size: 1em;
-    padding: 1.5rem;
+  /* Footer: Further adjustments for larger screens */
+  #home-page footer {
+    font-size: 1em; /* Standard footer font size */
+    padding: 1.5rem; /* Add padding to footer */
   }
 }
 
