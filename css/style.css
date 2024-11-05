@@ -159,55 +159,83 @@ main::after {
   clear: both;
 }
 
-/* Mobile Styles for Devices with a max-width of 1370px */
-@media screen and (max-width: 1370px) {
+/* Responsive Design */
+@media screen and (max-width: 600px) {
   nav ul {
-    flex-direction: column; /* Stack navigation items vertically */
-    padding: 0; /* Remove padding */
-    align-items: center; /* Center align the items */
+    flex-direction: column;
   }
   
   section {
-    width: 100%; /* Make sections full width */
-    margin: 0; /* Remove margin */
-    padding: 1em; /* Keep padding for spacing */
+    float: none;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  /* Adjust images for mobile */
+  #favorite-music img, #my-music img {
+    width: 100%;         /* Make images responsive */
+    max-width: 100%;     /* Ensure images do not exceed their container width */
+    height: auto;        /* Maintain aspect ratio */
+    margin-bottom: 1em;  /* Add space below images */
+  }
+
+  /* Adjust header font sizes for mobile */
+  h1 {
+    font-size: 1.5em;    /* Adjust font size to prevent overlap */
+  }
+
+  /* You can also adjust margins and paddings if needed */
+  header {
+    padding: 1em;        /* Adjust header padding for mobile */
   }
 }
 
-/* Styles for Devices with a min-width of 600px */
+/* Mobile Styles for Devices with a min-width of 600px */
 @media screen and (min-width: 600px) {
   nav ul {
-    display: flex; /* Flex layout for navigation */
-    justify-content: center; /* Center navigation items */
+    display: flex;
+    justify-content: center;
   }
-  
-  nav ul li a {
-    padding: 0.5em; /* Add padding to links */
-    font-size: 1.2em; /* Adjust font size for readability */
+
+  nav ul li {
+    margin: 0 1em;
   }
-  
-  main {
-    width: 90%; /* Set main content width */
-    margin: auto; /* Center main content */
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  section {
+    width: 45%;
+  }
+
+  #home-page main {
+    width: 90%;
+    margin: 3em auto;
   }
 }
 
-/* Styles for Devices with a min-width of 1000px */
+/* Mobile Styles for Devices with a min-width of 1000px */
 @media screen and (min-width: 1000px) {
   nav ul li {
-    display: inline-block; /* Inline block for horizontal navigation */
-    margin: 0 1em; /* Space between navigation items */
+    display: inline-block;
   }
-  
-  main {
-    display: flex; /* Flexbox for main layout */
-    flex-direction: row; /* Horizontal layout */
-    padding: 1em; /* Padding for main content */
+
+  section {
+    padding: 2em;
   }
-  
-  .imageR {
-    float: right; /* Float image to the right */
-    margin: 1em; /* Margin around the image */
+
+  #home-page main {
+    width: 80%;
+  }
+
+  h1, h2 {
+    margin-bottom: 0.5em;
+  }
+
+  footer {
+    font-size: 1em;
+    padding: 1.5rem;
   }
 }
 
