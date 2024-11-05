@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Google Maps API - Gelacio Angeles</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <link href="css/jquery.bxslider.css" rel="stylesheet">
+  <script async src="js/script.js"></script>
+</head>
+<body id="google-maps">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home Page and Professional Resume</a></li>
+        <li><a href="favorite_music.html">Favorite Genre of Music</a></li>
+        <li><a href="my_music.html">My Music</a></li>
+        <li><a href="maps.html">Map</a></li>
+      </ul>
+    </nav>
+    <h1>Google Maps API</h1>
+  </header>
+  <main>
+    <section id="map-section">
+      <h2>Illinois Institute of Technology Map</h2>
+      <div id="map" style="height: 500px;"></div>
+      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIWGeBWMq1N3gGBBltdTBS1D953KC2S0o&loading=async&callback=initMap"></script>
+    </section>
+    <section class="slideshow">
+      <h2>Illinois Institute of Technology</h2>
+      <ul class="bxslider">
+        <li><img src="images/mtcc.png" alt="A CTA train passing by MTCC, multiple fall trees with Downtown Chicago in the background, along with the Residence Halls on the right."></li>
+        <li><img src="images/sr.png" alt="S.R Crownhall located in the Mies campus at Illinois Institute of Technology. It is also associated with IIT College of Architecture"></li>
+        <li><img src="images/campus.png" alt="Three people walking around the Mies Campus around the season of Fall, located at Illinois Institute of Technology"></li>
+      </ul>
+    </section>
+    <script>
+      $(document).ready(function(){
+        $('.bxslider').bxSlider({
+          auto: true
+        });
+      });
+    </script>
+  </main>
+  <footer>
+    <p>Created by Gelacio Angeles</p>
+  </footer>
+</body>
+</html>
