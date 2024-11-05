@@ -164,29 +164,32 @@ main::after {
   nav ul {
     flex-direction: column;
   }
-  
+
   section {
     float: none;
     width: 100%;
     margin-bottom: 1em;
   }
 
-  /* Adjust images for mobile */
-  #favorite-music img, #my-music img {
-    width: 100%;         /* Make images responsive */
-    max-width: 100%;     /* Ensure images do not exceed their container width */
-    height: auto;        /* Maintain aspect ratio */
-    margin-bottom: 1em;  /* Add space below images */
+  /* Adjust all images for mobile to be very small */
+  img {
+    width: 70%;         /* Set width to 70% of the container */
+    max-width: 100%;    /* Ensure images do not exceed their container width */
+    max-height: 150px;  /* Limit the height of images */
+    height: auto;       /* Maintain aspect ratio */
+    margin-bottom: 1em; /* Add space below images */
+    display: block;     /* Ensure images are block elements */
+    margin-left: auto;  /* Center images */
+    margin-right: auto; /* Center images */
   }
 
   /* Adjust header font sizes for mobile */
   h1 {
-    font-size: 1.5em;    /* Adjust font size to prevent overlap */
+    font-size: 1.5em;   /* Adjust font size to prevent overlap */
   }
 
-  /* You can also adjust margins and paddings if needed */
   header {
-    padding: 1em;        /* Adjust header padding for mobile */
+    padding: 1em;       /* Adjust header padding for mobile */
   }
 }
 
