@@ -163,29 +163,33 @@ main::after {
 @media screen and (min-width: 600px) {
 
   #home-page nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Stacks nav items vertically */
   }
 
   #home-page header h1 {
-    font-size: 2.5em;
+    font-size: 2.5em; /* Increases font size for header */
+  }
+
+  /* Center the image below the heading */
+  #home-page header img {
+    display: block; /* Make the image a block element */
+    margin: 20px auto; /* Center the image and add vertical spacing */
+    max-width: 90%; /* Limit the width of the image */
+    height: auto; /* Maintain aspect ratio */
   }
 
   #home-page section {
-    width: 100%;
-    margin-bottom: 1em;
+    width: 100%; /* Full width for sections on mobile */
+    margin-bottom: 1em; /* Spacing between sections */
   }
 
   #home-page main {
-    padding: 1em;
+    padding: 1em; /* Padding for main content */
   }
 
   #home-page footer {
-    font-size: 1.2em;
-    padding: 1rem;
-  }
-  
-  #home-page img {
-    margin: 8em auto 1em;
+    font-size: 1.2em; /* Adjust footer font size */
+    padding: 1rem; /* Padding for footer */
   }
 }
 
@@ -193,24 +197,24 @@ main::after {
 @media screen and (min-width: 1000px) {
 
   #home-page nav ul {
-    flex-direction: row;
+    flex-direction: row; /* Horizontal nav items for larger screens */
   }
 
   #home-page section {
-    width: 48%;
+    width: 48%; /* Two columns of sections */
   }
 
   #home-page header h1, #home-page header h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em; /* Space below header */
   }
 
   #home-page main {
-    width: 80%;
+    width: 80%; /* Width for main content on larger screens */
   }
 
   #home-page footer {
-    font-size: 1em;
-    padding: 1.5rem;
+    font-size: 1em; /* Default font size for footer */
+    padding: 1.5rem; /* Padding for footer */
   }
 }
 
