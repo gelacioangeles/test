@@ -192,47 +192,56 @@ iframe {
   display: block;
 }
 
-/* Media Query for Small Devices (min-width: 480px) */
+/* Media Query for Small to Medium Devices (min-width: 480px) */
 @media (min-width: 480px) {
   body {
-    padding: 0 0.5em;
+    padding: 0 1em; /* Add padding for readability on larger devices */
   }
+
+  h1 {
+    font-size: 2em; /* Increase font size for main heading */
+  }
+
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around; /* Space out nav items evenly */
   }
+
   section {
-    width: 100%;
-    margin: 0.5em 0;
+    width: 48%; /* Keep sections side by side for wider screens */
+    margin: 1%; /* Maintain margins for spacing */
   }
-  #home-page main {
-    width: 100%;
-    padding: 1em;
-  }
-  .imageR {
-    top: 10px;
-    right: 10px;
+
+  /* Adjust image sizes for better layout */
+  #home-page img {
+    max-width: 100%; /* Ensure images scale with their containers */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
-/* Media Query for Medium Devices (min-width: 768px) */
+/* Media Query for Larger Devices (min-width: 768px) */
 @media (min-width: 768px) {
   body {
-    padding: 0 1em;
+    padding: 0 2em; /* Add more padding for larger screens */
   }
+
+  h1 {
+    font-size: 2.5em; /* Further increase font size for visibility */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Adjust font size for subheadings */
+  }
+
   nav ul {
-    flex-direction: row;
+    flex-direction: row; /* Horizontal layout for nav items */
   }
+
   section {
-    width: 48%;
-    margin: 1%;
+    width: 45%; /* Adjust section width for better spacing */
+    margin: 1.5%; /* Add more margin for visual separation */
   }
-  #home-page main {
-    width: 90%;
-    padding: 2em;
-  }
-  .imageR {
-    top: 20px;
-    right: 20px;
+
+  footer {
+    padding: 2rem; /* Increase padding in footer for larger screens */
   }
 }
