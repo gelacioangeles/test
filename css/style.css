@@ -195,6 +195,16 @@ main::after {
     width: 90%;
     margin: 3em auto;
   }
+ 
+  #home-page img,
+  #favorite-music img,
+  #my-music img {
+    max-width: 250px; /* Increase max width for images on mobile */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: auto; /* Align to the right */
+    margin-right: 0; /* No right margin */
+    display: block; /* Make images block elements */
+  }
 }
 
 /* Mobile Styles for Devices with a min-width of 1000px */
@@ -218,6 +228,16 @@ main::after {
   footer {
     font-size: 1em;
     padding: 1.5rem;
+  }
+
+  #home-page img,
+  #favorite-music img,
+  #my-music img {
+    max-width: 250px; /* Increase max width for images on mobile */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: auto; /* Align to the right */
+    margin-right: 0; /* No right margin */
+    display: block; /* Make images block elements */
   }
 }
 
