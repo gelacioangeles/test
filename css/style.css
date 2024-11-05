@@ -139,7 +139,7 @@ main::after {
 
   /* Keep the original image style */
   #home-page img {
-    margin: 8em auto 1em; /* Maintain original margin style */
+    margin: 4em auto 1em; /* Maintain original margin style */
   }
 }
 
