@@ -174,7 +174,6 @@ main::after {
 
 /* Mobile Styles for Devices with a min-width of 600px */
 @media screen and (min-width: 600px) {
-    /* Targeting elements specifically within the #home-page */
     #home-page nav ul {
         display: flex;
         justify-content: center;
@@ -198,7 +197,7 @@ main::after {
         max-width: 100%; /* Ensure image scales down on smaller screens */
         height: auto; /* Maintain aspect ratio */
         display: block; /* Center image */
-        margin: 0 auto; /* Center image horizontally */
+        margin: 2em auto 1em; /* Move image down with top margin */
     }
 
     #home-page section {
@@ -213,7 +212,7 @@ main::after {
 }
 
 /* Styles for Devices with a min-width of 1000px */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1000px) {
     #home-page nav ul {
         justify-content: flex-start; /* Align navigation items to the left */
     }
