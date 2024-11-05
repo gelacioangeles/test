@@ -54,7 +54,7 @@ nav ul li a {
 
 /* Header Styles */
 header {
-  text-align: center;
+  text-align: center; /* Center the header */
 }
 
 h1, h2 {
@@ -82,7 +82,7 @@ h1, h2 {
 main {
   max-width: 90%;
   margin: 2em auto;
-  position: relative;
+  position: relative; /* Necessary for positioning child elements */
 }
 
 /* Fixed Width for Home Page */
@@ -100,11 +100,12 @@ section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Absolute Positioning for Header Image */
+/* Header Image */
 .imageR {
-  position: absolute; /* Absolute positioning */
-  top: 20px; /* Adjust top position */
-  right: 20px; /* Move to the right side */
+  display: block; /* Make the image a block element */
+  margin: 1em auto; /* Center the image */
+  max-width: 90%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Demo Track Section */
@@ -159,61 +160,77 @@ main::after {
   clear: both;
 }
 
-/* Mobile Styles for Devices with a min-width of 600px */
-@media screen and (min-width: 600px) {
-
-  #home-page nav ul {
-    flex-direction: column; /* Stacks nav items vertically */
-  }
-
-  #home-page header h1 {
-    font-size: 2.5em; /* Increases font size for header */
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
   }
 
   /* Center the image below the heading */
-  #home-page header img {
-    display: block; /* Make the image a block element */
-    margin: 20px auto; /* Center the image and add vertical spacing */
-    max-width: 90%; /* Limit the width of the image */
+  #home-page header img.imageR {
+    margin: 1em auto; /* Center the image */
+    max-width: 90%; /* Responsive image width */
     height: auto; /* Maintain aspect ratio */
   }
 
-  #home-page section {
+  section {
+    float: none; /* No float for sections on mobile */
     width: 100%; /* Full width for sections on mobile */
     margin-bottom: 1em; /* Spacing between sections */
   }
 
-  #home-page main {
+  main {
     padding: 1em; /* Padding for main content */
+    text-align: center; /* Center align text within main */
   }
 
-  #home-page footer {
+  footer {
     font-size: 1.2em; /* Adjust footer font size */
     padding: 1rem; /* Padding for footer */
   }
 }
 
+/* Styles for Devices with a min-width of 600px */
+@media (min-width: 600px) {
+  nav ul {
+    display: flex; /* Ensure flex display for navigation */
+    justify-content: center; /* Center navigation items */
+  }
+
+  nav ul li {
+    margin: 0 1em; /* Margin for navigation items */
+  }
+
+  header h1 {
+    font-size: 2em; /* Header font size */
+    margin-bottom: 0.5em; /* Space below heading */
+  }
+
+  section {
+    width: 45%; /* Allow for two columns of sections */
+  }
+}
+
 /* Mobile Styles for Devices with a min-width of 1000px */
-@media screen and (min-width: 1000px) {
-
-  #home-page nav ul {
-    flex-direction: row; /* Horizontal nav items for larger screens */
+@media (min-width: 1000px) {
+  nav ul li {
+    display: inline-block; /* Inline block for larger screens */
   }
 
-  #home-page section {
-    width: 48%; /* Two columns of sections */
-  }
-
-  #home-page header h1, #home-page header h2 {
-    margin-bottom: 0.5em; /* Space below header */
+  section {
+    padding: 2em; /* Padding for sections */
   }
 
   #home-page main {
-    width: 80%; /* Width for main content on larger screens */
+    width: 80%; /* Width for main content */
   }
 
-  #home-page footer {
-    font-size: 1em; /* Default font size for footer */
+  h1, h2 {
+    margin-bottom: 0.5em; /* Margin for headings */
+  }
+
+  footer {
+    font-size: 1em; /* Footer font size */
     padding: 1.5rem; /* Padding for footer */
   }
 }
