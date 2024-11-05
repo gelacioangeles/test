@@ -199,11 +199,8 @@ main::after {
   #home-page img,
   #favorite-music img,
   #my-music img {
-    max-width: 250px; /* Increase max width for images on mobile */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: auto; /* Align to the right */
-    margin-right: 0; /* No right margin */
-    display: block; /* Make images block elements */
+    float: right;
+    margin: 1em;
   }
 }
 
@@ -233,11 +230,8 @@ main::after {
   #home-page img,
   #favorite-music img,
   #my-music img {
-    max-width: 250px; /* Increase max width for images on mobile */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: auto; /* Align to the right */
-    margin-right: 0; /* No right margin */
-    display: block; /* Make images block elements */
+    float: right;
+    margin: 1em;
   }
 }
 
