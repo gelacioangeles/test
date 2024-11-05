@@ -160,7 +160,7 @@ main::after {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 600px) {
   nav ul {
     flex-direction: column;
   }
@@ -169,6 +169,22 @@ main::after {
     float: none;
     width: 100%;
     margin-bottom: 1em;
+  }
+
+  /* Adjust image sizes for mobile */
+  #home-page img {
+    max-width: 300px; /* Adjust to desired size for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  #favorite-music img {
+    max-width: 300px; /* Adjust to desired size for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  #my-music img {
+    max-width: 300px; /* Adjust to desired size for mobile */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
@@ -195,16 +211,6 @@ main::after {
     width: 90%;
     margin: 3em auto;
   }
- 
-  #home-page img,
-  #favorite-music img,
-  #my-music img {
-    max-width: 250px; /* Increase max width for images on mobile */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: auto; /* Align to the right */
-    margin-right: 0; /* No right margin */
-    display: block; /* Make images block elements */
-  }
 }
 
 /* Mobile Styles for Devices with a min-width of 1000px */
@@ -228,16 +234,6 @@ main::after {
   footer {
     font-size: 1em;
     padding: 1.5rem;
-  }
-
-  #home-page img,
-  #favorite-music img,
-  #my-music img {
-    max-width: 250px; /* Increase max width for images on mobile */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: auto; /* Align to the right */
-    margin-right: 0; /* No right margin */
-    display: block; /* Make images block elements */
   }
 }
 
