@@ -171,20 +171,21 @@ main::after {
     margin-bottom: 1em;
   }
 
-  /* Adjust image sizes for mobile */
-  #home-page img {
-    max-width: 300px; /* Adjust to desired size for mobile */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  #favorite-music img {
-    max-width: 300px; /* Adjust to desired size for mobile */
-    height: auto; /* Maintain aspect ratio */
-  }
-
+  /* Adjust image sizes for mobile, affecting only mobile versions */
+  #home-page img,
+  #favorite-music img,
   #my-music img {
-    max-width: 300px; /* Adjust to desired size for mobile */
+    max-width: 80%; /* Make images take up 80% of the width */
     height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the images */
+  }
+
+  /* Optional: If you want to ensure a consistent height as well */
+  #home-page img,
+  #favorite-music img,
+  #my-music img {
+    max-height: 300px; /* Set a maximum height if needed */
+    object-fit: cover; /* Ensure images cover the given space */
   }
 }
 
