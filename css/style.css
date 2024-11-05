@@ -159,85 +159,6 @@ main::after {
   clear: both;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-  
-  section {
-    float: none;
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  /* Adjust image sizes for mobile, affecting only mobile versions */
-  #home-page img,
-  #favorite-music img,
-  #my-music img {
-    max-width: 80%; /* Make images take up 80% of the width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center the images */
-  }
-
-  /* Optional: If you want to ensure a consistent height as well */
-  #home-page img,
-  #favorite-music img,
-  #my-music img {
-    max-height: 300px; /* Set a maximum height if needed */
-    object-fit: cover; /* Ensure images cover the given space */
-  }
-}
-
-/* Mobile Styles for Devices with a min-width of 600px */
-@media screen and (min-width: 600px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 0 1em;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  section {
-    width: 45%;
-  }
-
-  #home-page main {
-    width: 90%;
-    margin: 3em auto;
-  }
-}
-
-/* Mobile Styles for Devices with a min-width of 1000px */
-@media screen and (min-width: 1000px) {
-  nav ul li {
-    display: inline-block;
-  }
-
-  section {
-    padding: 2em;
-  }
-
-  #home-page main {
-    width: 80%;
-  }
-
-  h1, h2 {
-    margin-bottom: 0.5em;
-  }
-
-  footer {
-    font-size: 1em;
-    padding: 1.5rem;
-  }
-}
-
 /* Iframe Styling */
 iframe {
   border: 0;
@@ -269,4 +190,49 @@ iframe {
   height: 300px;
   object-fit: cover;
   display: block;
+}
+
+/* Media Query for Small Devices (min-width: 480px) */
+@media (min-width: 480px) {
+  body {
+    padding: 0 0.5em;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  #home-page main {
+    width: 100%;
+    padding: 1em;
+  }
+  .imageR {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Media Query for Medium Devices (min-width: 768px) */
+@media (min-width: 768px) {
+  body {
+    padding: 0 1em;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  section {
+    width: 48%;
+    margin: 1%;
+  }
+  #home-page main {
+    width: 90%;
+    padding: 2em;
+  }
+  .imageR {
+    top: 20px;
+    right: 20px;
+  }
 }
