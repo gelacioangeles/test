@@ -193,7 +193,7 @@ main::after {
         margin: 0.5em 0; /* Add margin for spacing */
     }
 
-    #home-page header img.imageR {
+    #home-page img {
         max-width: 100%; /* Ensure image scales down on smaller screens */
         height: auto; /* Maintain aspect ratio */
         display: block; /* Center image */
