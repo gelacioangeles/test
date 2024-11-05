@@ -137,12 +137,19 @@ section {
 #favorite-music img {
   border: 2px dotted blue;
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  max-width: 150px; /* Set a max width for mobile */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+  display: block; /* Make it a block element */
 }
 
 #my-music img {
   border: 2px dashed green;
+  width: 100%;
+  max-width: 150px; /* Set a max width for mobile */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
+  display: block; /* Make it a block element */
 }
 
 /* Footer Styling */
@@ -171,25 +178,12 @@ main::after {
     margin-bottom: 1em;
   }
 
-  /* Adjust all images for mobile to be very small */
+  /* Adjust all images for mobile to be small */
   img {
-    width: 70%;         /* Set width to 70% of the container */
-    max-width: 100%;    /* Ensure images do not exceed their container width */
-    max-height: 150px;  /* Limit the height of images */
-    height: auto;       /* Maintain aspect ratio */
-    margin-bottom: 1em; /* Add space below images */
-    display: block;     /* Ensure images are block elements */
-    margin-left: auto;  /* Center images */
-    margin-right: auto; /* Center images */
-  }
-
-  /* Adjust header font sizes for mobile */
-  h1 {
-    font-size: 1.5em;   /* Adjust font size to prevent overlap */
-  }
-
-  header {
-    padding: 1em;       /* Adjust header padding for mobile */
+    max-width: 150px; /* Set max width for all images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center images */
+    display: block; /* Make images block elements */
   }
 }
 
