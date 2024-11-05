@@ -40,18 +40,6 @@ nav ul li a {
   color: red;
 }
 
-#favorite-music nav ul li a:hover {
-  color: blue;
-}
-
-#my-music nav ul li a:hover {
-  color: green;
-}
-
-#google-maps nav ul li a:hover {
-  color: #D700D7;
-}
-
 /* Header Styles */
 header {
   text-align: center; /* Center the header */
@@ -61,21 +49,9 @@ h1, h2 {
   font-family: 'Metal Mania', 'Comic Sans MS', cursive;
 }
 
-/* Different Header Colors for Each Page that match the Hover Color of the Navigation */
+/* Different Header Colors for Each Page */
 #home-page h1, #home-page h2 {
   color: red;
-}
-
-#favorite-music h1, #favorite-music h2 {
-  color: blue;
-}
-
-#my-music h1, #my-music h2 {
-  color: green;
-}
-
-#google-maps h1, #google-maps h2 {
-  color: #D700D7; /* Bright purple color */
 }
 
 /* Main Content */
@@ -108,42 +84,14 @@ section {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Demo Track Section */
-#demo-track {
-  float: right; /* Float this section to the right */
-}
-
 /* Section Border Styles */
 #home-page section {
   border: 2px solid red;
 }
 
-#favorite-music section {
-  border: 2px dotted blue;
-}
-
-#my-music section {
-  border: 2px dashed green;
-}
-
-#google-maps section {
-  border: 2px solid #D700D7;
-}
-
-/* Image Border Styles (Same as the Section Border Styles) */
+/* Image Border Styles */
 #home-page img {
   border: 2px solid red;
-}
-
-#favorite-music img {
-  border: 2px dotted blue;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-#my-music img {
-  border: 2px dashed green;
 }
 
 /* Footer Styling */
@@ -160,78 +108,67 @@ main::after {
   clear: both;
 }
 
-/* Responsive Design for Mobile Devices */
-@media (max-width: 600px) {
-  nav ul {
+/* Mobile Styles for Devices with a min-width of 600px */
+@media screen and (min-width: 600px) {
+  /* Navigation: Change flex direction to column for smaller screens */
+  #home-page nav ul {
     flex-direction: column; /* Stack navigation items vertically */
   }
-
-  /* Center the image below the heading */
-  #home-page header img.imageR {
-    margin: 1em auto; /* Center the image */
-    max-width: 90%; /* Responsive image width */
-    height: auto; /* Maintain aspect ratio */
+  
+  /* Header: Increase font size for better readability */
+  #home-page header h1 {
+    font-size: 2.5em; /* Larger font size for header */
   }
 
-  section {
-    float: none; /* No float for sections on mobile */
-    width: 100%; /* Full width for sections on mobile */
-    margin-bottom: 1em; /* Spacing between sections */
+  /* Section width: Set to 100% to stack sections */
+  #home-page section {
+    width: 100%; /* Full width for sections */
+    margin-bottom: 1em; /* Space between sections */
   }
 
-  main {
-    padding: 1em; /* Padding for main content */
-    text-align: center; /* Center align text within main */
+  /* Main content: Adjust the main content layout */
+  #home-page main {
+    padding: 1em; /* Add padding for better spacing */
   }
 
-  footer {
-    font-size: 1.2em; /* Adjust footer font size */
-    padding: 1rem; /* Padding for footer */
-  }
-}
-
-/* Styles for Devices with a min-width of 600px */
-@media (min-width: 600px) {
-  nav ul {
-    display: flex; /* Ensure flex display for navigation */
-    justify-content: center; /* Center navigation items */
+  /* Footer: Adjust font size for readability */
+  #home-page footer {
+    font-size: 1.2em; /* Increase footer font size */
+    padding: 1rem; /* Add padding to footer */
   }
 
-  nav ul li {
-    margin: 0 1em; /* Margin for navigation items */
-  }
-
-  header h1 {
-    font-size: 2em; /* Header font size */
-    margin-bottom: 0.5em; /* Space below heading */
-  }
-
-  section {
-    width: 45%; /* Allow for two columns of sections */
+  /* Keep the original image style */
+  #home-page img {
+    margin: 8em auto 1em; /* Maintain original margin style */
   }
 }
 
 /* Mobile Styles for Devices with a min-width of 1000px */
-@media (min-width: 1000px) {
-  nav ul li {
-    display: inline-block; /* Inline block for larger screens */
+@media screen and (min-width: 1000px) {
+  /* Navigation: Change layout to horizontal */
+  #home-page nav ul {
+    flex-direction: row; /* Horizontal navigation */
   }
 
-  section {
-    padding: 2em; /* Padding for sections */
+  /* Section width: Allow two sections side by side */
+  #home-page section {
+    width: 48%; /* Two sections side by side */
   }
 
+  /* Header: Adjust margin for spacing */
+  #home-page header h1, #home-page header h2 {
+    margin-bottom: 0.5em; /* Space below headers */
+  }
+
+  /* Main content width: Adjust main content layout */
   #home-page main {
-    width: 80%; /* Width for main content */
+    width: 80%; /* Set width for main content */
   }
 
-  h1, h2 {
-    margin-bottom: 0.5em; /* Margin for headings */
-  }
-
-  footer {
-    font-size: 1em; /* Footer font size */
-    padding: 1.5rem; /* Padding for footer */
+  /* Footer: Further adjustments for larger screens */
+  #home-page footer {
+    font-size: 1em; /* Standard footer font size */
+    padding: 1.5rem; /* Add padding to footer */
   }
 }
 
