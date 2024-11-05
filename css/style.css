@@ -160,7 +160,7 @@ main::after {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1370px) {
   nav ul {
     flex-direction: column;
   }
@@ -173,52 +173,73 @@ main::after {
 }
 
 /* Mobile Styles for Devices with a min-width of 600px */
-@media screen and (min-width: 320px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
+@media screen and (min-width: 600px) {
+    /* Targeting elements specifically within the #home-page */
+    #home-page nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow items to wrap in case of narrow viewports */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style-type: none; /* Remove bullet points from list */
+    }
 
-  nav ul li {
-    margin: 0 1em;
-  }
+    #home-page nav ul li {
+        margin: 0 1em; /* Spacing between navigation items */
+    }
 
-  header h1 {
-    font-size: 2em;
-  }
+    #home-page header h1 {
+        font-size: 2em; /* Increase font size for header */
+        text-align: center; /* Center header text */
+        margin: 0.5em 0; /* Add margin for spacing */
+    }
 
-  section {
-    width: 45%;
-  }
+    #home-page header img.imageR {
+        max-width: 100%; /* Ensure image scales down on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Center image */
+        margin: 0 auto; /* Center image horizontally */
+    }
 
-  #home-page main {
-    width: 90%;
-    margin: 3em auto;
-  }
+    #home-page section {
+        width: 90%; /* Use 90% width for sections */
+        margin: 2em auto; /* Center sections with margin */
+    }
+
+    #home-page main {
+        width: 90%; /* Main content width */
+        margin: 3em auto; /* Center main content */
+    }
 }
 
-/* Mobile Styles for Devices with a min-width of 1000px */
-@media screen and (min-width: 480px) {
-  nav ul li {
-    display: inline-block;
-  }
+/* Styles for Devices with a min-width of 1000px */
+@media screen and (min-width: 400px) {
+    #home-page nav ul {
+        justify-content: flex-start; /* Align navigation items to the left */
+    }
 
-  section {
-    padding: 2em;
-  }
+    #home-page nav ul li {
+        display: inline-block; /* Keep navigation items inline for larger screens */
+    }
 
-  #home-page main {
-    width: 80%;
-  }
+    #home-page section {
+        padding: 2em; /* Add padding for sections on larger screens */
+        width: 80%; /* Maintain wider section on larger screens */
+        margin: 2em auto; /* Center section with margin */
+    }
 
-  h1, h2 {
-    margin-bottom: 0.5em;
-  }
+    #home-page main {
+        width: 80%; /* Maintain larger main content width */
+    }
 
-  footer {
-    font-size: 1em;
-    padding: 1.5rem;
-  }
+    #home-page h1, #home-page h2 {
+        margin-bottom: 0.5em; /* Consistent margin for headers */
+    }
+
+    #home-page footer {
+        font-size: 1em; /* Consistent footer font size */
+        padding: 1.5rem; /* Ensure footer has ample padding */
+    }
 }
 
 /* Iframe Styling */
